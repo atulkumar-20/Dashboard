@@ -12,7 +12,13 @@ import {
 } from "recharts";
 import { ChartDataPoint } from "../../types/charts";
 
-const COLORS: string[] = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
+const COLORS: string[] = [
+  "#6366F1",
+  "#8B5CF6",
+  "#EC4899",
+  "#10B981",
+  "#F59E0B",
+];
 
 const SALES_CHANNEL_DATA: ChartDataPoint[] = [
   { name: "Website", value: 45600 },
@@ -48,7 +54,7 @@ export const SalesChannelChart = () => {
             />
             <Legend />
             <Bar dataKey="value" fill="#8884d8">
-              {SALES_CHANNEL_DATA.map((entry, index) => (
+              {SALES_CHANNEL_DATA.map((_, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}

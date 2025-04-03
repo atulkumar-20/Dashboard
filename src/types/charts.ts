@@ -10,7 +10,7 @@ export interface SalesDataPoint {
 
 export interface StatCardProps {
   name: string;
-  value: string;
+  value: number | string;
   icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>;
   color: string;
 }
